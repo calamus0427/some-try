@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>滑动门特效</title>
+<script>
+function nTabs(thisObj,Num){
+	if(thisObj.className=="active")return;
+	var tabObj=thisObj.parentNode.id;
+	var tabList=document.getElementById(tabObj).getElementsByTagName("li");
+	for(i=0;i<tabList.length;i++)
+	{
+		if(i==Num){
+			thisObj.className="active";
+			document.getElementById(tabObj+"_Content"+i).style.display="block";
+			}
+		else{
+			tabList[i].className="normal";
+			document.getElementById(tabObj+"_Content"+i).style.display="none";
+			}}
+	}
+</script>
+<style rel="stylesheet" type="text/css">
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:14px;
+	}
+.nTab{
+	width:500px;
+	height:200px;
+	margin:20px auto;
+	border:1px solid #333;
+	overflow:hidden;
+	}
+.none{
+	display:none;
+	}
+.nTab .TabTitle li{
+	flost:left;
+	cursor:pointer;
+	height:35px;
+	line-height:35px;
+	font-weight:bold;
+	text-align:center;
+	width:124px;
+	}
+.nTab .Tabtitle li a{
+	text-decoration:none;
+	
+	}
+
+.nTab .TabTitle .active
+{
+	background-color:blue;
+	color:#336699;
+	}
+.nTab .TabTitle .normal{color:#f1ac1c;}
+.nTab .TabTitle #myTab li
+{
+	float:left;}
+.nTab .TabContent
+{
+	clear:both;
+	overflow:hidden;
+	background:#fff;
+	padding:5px;
+	display:block;
+	height:100px;
+	}
+</style>
+</head>
+
+<body>
+<div class="nTab">
+	<div class="TabTitle">
+    	<ul id="myTab" >
+        	<li class="active" onmouseover="nTabs(this,0);">HTML5</li>
+            <li class="normal" onmouseover="nTabs(this,1);">CSS3</li>
+            <li class="normal" onmouseover="nTabs(this,2);">JAVASCRIPT</li>
+            <li class="normal" onmouseover="nTabs(this,3);">jQuery</li>
+        </ul>
+    </div>
+    <div class="TabContent">
+    	<div id="myTab_Content0" class="none">第一块内容</div>
+        <div id="myTab_Content1" class="none">第二块内容</div>
+        <div id="myTab_Content2" class="none">第三块内容</div>
+        <div id="myTab_Content3" class="none">第四块内容</div>
+    </div>
+</div>
+</body>
+</html>
