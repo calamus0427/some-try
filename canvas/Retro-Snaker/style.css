@@ -1,0 +1,23 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	}
+table #map{
+	width:auto;
+	height:auto;
+	margin:0 auto;
+	border-collapse:collapse;
+	border-spacing:0;
+	background-color:#EAEAEA;
+	clear:both;
+	}
+td{width:10px; height:10px;border:1px solid black;}
+.shead{background-color:#C60;}
+.sbody{background-color:black;}
+.sfood{background-color:#c60;}
+.info{width:500px;margin:0 auto;padding:3em 0;}
+.info li{float:left;height:30px;margin-right:2em;line-height:30px;}/* CSS Document */
+
