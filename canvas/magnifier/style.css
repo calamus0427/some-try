@@ -1,0 +1,19 @@
+@charset "utf-8";
+canvas{
+	background-color:white;
+	position:absolute;
+	}
+canvas #canvas1{
+		z-index=1;
+		}
+canvas #canvas2{
+	z-index=2;
+	left:0px;
+	top:0px;
+	border:thin dashed black;
+	border-radius:40px;
+	-0-border-radius:40px;
+	-webkit-border-radius:40px;
+	-moz-border-radius:40px;
+	display:none;
+	}
