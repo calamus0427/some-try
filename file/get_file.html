@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>获取文件类型和大小</title>
+<link rel="stylesheet" href="style.css"/>
+<script>
+// JavaScript Document
+function $$(id){
+	return document.getElementById(id);
+	}
+function fileUpload_GetFileList(f){
+	var strLi="<li class='li'>";
+	strLi=strLi+"<span>文件名称</span>";
+	strLi=strLi+"<span>文件大小</span>";
+	strLi=strLi+"<span>文件类型</span>";
+	strLi=strLi+"</li>";
+	for(var intI=0;intI<f.length;intI++)
+	{
+		var tmpFile=f[intI];
+		strLi=strLi+"<li>";
+		strLi=strLi+"<span>"+tmpFile.name+"</span>";
+		strLi=strLi+"<span>"+tmpFile.type+"</span>";
+		strLi=strLi+"<span>"+tmpFile.nsize+"KB</span>";
+		strLi=strLi+"</li>";
+		}
+		$$("ulUpload").innerHTML=strLi;
+	}
+</script>
+</head>
+
+<body>
+<form id="frmTmp">
+	<fieldset>
+	<legend>上传多个文件</legend>
+    <input type="file" name="fleUpload" id="fleUpload" onChange="fileUpload_GetFileList(this.files);" multiple/>
+    <ul id="ulUpload"></ul>
+    </fieldset>
+</form>
+</body>
+</html>
