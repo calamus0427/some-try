@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css"/>
+<script >
+function $$(id){
+	return document.getElementById(id);
+	}
+function fileUpload_PrevImageFile(f){
+	if(typeof FileReader=="undefined"){
+		alert("浏览器不支持");
+		}
+	var strHTML="";
+	for(var intI=0;intI<f.length;intI++)
+	{
+		var tmpFile=f[intI];
+		var reader=new FileReader();
+		reader.readAsDataURL(tmpFile);
+		reader.onload=function(e){
+			strHTML=strHTML+"<span>";
+			strHTML=strHTML+"<img src='"+e.target.result+"' alt=''/>";
+			strHTML=strHTML+"</span>";
+			$$("ulUpload").innerHTML="<li>"+strHTML+"</li>";
+			}
+		}
+	}</script>
+<title>预览图片</title>
+</head>
+
+<body>
+<form id="frmTmp">
+	<fieldset>
+	<legend>预览：</legend>
+    <input type="file" name="fleUpload" id="fleUpload" onChange="fileUpload_PrevImageFile(this.files);" multiple/>
+    <ul id="ulUpload"></ul>
+    </fieldset>
+</form>
+</body>
+</html>
