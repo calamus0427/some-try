@@ -1,99 +1,55 @@
-<!doctype html>
+<!DOCTYPE>
 <html>
 <head>
-<meta charset="utf-8">
-<title>HTML5 版菜单</title>
-<style type="text/css">
-body{
-	margin:0px;
-	}
-nav ul li{
-	list-style:none;
-	width:195px;
-	line-height:10px;
-	}
-nav ul li img{
-	width:195px;
-	height:28px;
-	cursor:pointer;
-	}
-nav ul li #first{
-	height:6px;
-	background:url();
-	}
-nav ul li ul{
-	display:inline;
-	padding:0px;
-	}
-nav ul li ul li{
-	height:20px;
-	background-color:#aee4ee;
-	font-size:12px;
-	color:#333333;
-	text-align:center;
-	width:195px;
-	}
-nav ul li ul li a{
-	font-size:12px;
-	color:#333333;
-	text-decoration:none;
-	}
-	
-</style>
-<script>
-function init(){
-	document.getElementById("submenu1").hidden==true;
-	document.getElementById("submenu2").hidden=false;
-	}
-	
-function nav_fill1()
-{
-	if(document.getElementById("submenu1").hidden===true)
-		document.getElementById("submenu1").hidden=false;
-		else
-		 	document.getElementById("submenu1").hidden=true;
-}
-function nav_fill2()
-{
-	if(document.getElementById("submenu2").hidden===true)
-		document.getElementById("submenu2").hidden=false;
-		else
-		 	document.getElementById("submenu2").hidden=true;
-}
-</script>
-</head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>导航菜单</title>
+<style>
+*{margin:0;padding:0;font-size:14px;}
+ .nav_1 ul{list-style:none;width:100px;}
+.nav_1 a{text-decoration: none;display:block;height:30px;line-height:30px;width:100px;background-color:#EF4CFF;margin-bottom:1px;text-align:center;}
+.nav_1 a:hover{background-color:#EB4242 ;color:#fff;}
 
-<body onload="init()">
-<nav id="nav">
+.nav_2 {margin-top:50px;}
+.nav_2 ul{list-style:none;}
+.nav_2 ul  li{float:left;}
+.nav_2 a{text-decoration: none;display:block;height:30px;line-height:30px;width:100px;background-color:#6DE0FF;margin-bottom:1px;text-align:center;}
+.nav_2 a:hover{background-color: ;color:#fff;width:180px;}
+
+.nav_3 ul{list-style:none;height:50px;border-bottom:5px solid #F60;padding-left:30px;}
+.nav_3 {margin-top:150px;}
+.nav_3 ul  li{float:left;margin-top:10px;}
+.nav_3 a{text-decoration: none;display:block;height:30px;line-height:30px;width:100px;background-color:#6DE0FF;margin-bottom:1px;text-align:center;}
+.nav_3 .on,.nav_3 a:hover{color:#fff;height:40px;margin-top:-10px;line-height:40px;}
+</style>
+
+</head>
+<body>
+<div class="nav_1">
 	<ul>
-    	<li id="first"></li>
-        <li><img src="" onclick="nav_fill1()"/></li>
-        <li>
-        	<nav id="submenu1">
-            	<ul>
-                	<li><a href="add_user1.html" target="mainFrame">1</a></li>
-                    <li><a href="add_user2.html" target="mainFrame">2</a></li>
-                    <li><a href="add_user3.html" target="mainFrame">3</a></li>
-                </ul>
-             </nav>
-        </li>
-        <li><img src="" onclike="nav_fill2()"/></li>
-        <li>
-        	<nav id="submenu2">
-            	<ul>
-                	<li><a href="add_city.html" target="mainFrame">1</a></li>
-                    <li><a href="add_user2.html" target="mainFrame">2</a></li>
-                    <li><a href="add_user3.html" target="mainFrame">3</a></li>
-                </ul>
-             </nav>
-        </li>
-        <li><a href=""><img src=""/></a></li>
-        <li><a href=""><img src=""/></a></li>
-        <li><a href=""><img src=""/></a></li>
-        <li><a href=""><img src=""/></a></li>
-        <li><a href=""><img src=""/></a></li>
-        <li><a href=""><img src=""/></a></li>
-  </ul>
-</nav>      
+		<li><a href="">第一</a></li>
+		<li><a href="">第二</a></li>
+		<li><a href="">第三</a></li>
+		<li><a href="">第四</a></li>
+		<li><a href="">第五</a></li>
+	</ul>
+</div>
+<div class="nav_2">
+		<ul>
+		<li><a href="">第一</a></li>
+		<li><a href="">第二</a></li>
+		<li><a href="">第三</a></li>
+		<li><a href="">第四</a></li>
+		<li><a href="">第五</a></li>
+	</ul>	
+</div>
+<div class="nav_3">
+		<ul>
+		<li><a href=""  class="on">第一</a></li>
+		<li><a href="">第二</a></li>
+		<li><a href="">第三</a></li>
+		<li><a href="">第四</a></li>
+		<li><a href="">第五</a></li>
+	</ul>	
+</div>
 </body>
 </html>
